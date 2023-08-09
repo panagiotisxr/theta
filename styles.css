@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.data-input {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+input {
+  width: 60px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+.container {
+  display: flex; /* Display containers side by side */
+  margin: 100px;
+  width: 80%; /* Set containers to take up the full width */
+}
+
+.chart-container {
+  flex: 1;
+  margin-right: 100px;
+  width: 80%; /* Set containers to take up the full width */
+}
+
+.table-container {
+  flex: 1;
+}
+.table-container {
+  flex: 1;
+  max-height: 500px; /* Set a maximum height for the table container */
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+}
