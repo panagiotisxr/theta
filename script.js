@@ -65,8 +65,15 @@ function updateDataTable() {
         const strengthCell = document.createElement('td');
 
         depthCell.textContent = depthData[i].toFixed(1);
-        strengthCell.textContent = strengthData[i];
+        const strengthValue = strengthData[i];
+        strengthCell.textContent = strengthValue;
+        strengthCell.setAttribute('contenteditable', 'true'); // Enable content editing
 
+        strengthCell.addEventListener('input', function () {
+            strengthData[i] = parseFloat(strengthCell.textContent) || 0;
+            soilStrengthChart.update(); // Update the chart
+            updateAverageStrength(); // Update average strength
+        });
         row.appendChild(depthCell);
         row.appendChild(strengthCell);
 
