@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" href="favicon.ico">
     <title>Soil Strength Chart</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script> 
+</head>
+
+
 </head>
 <body>
     <div class="container">
@@ -21,7 +25,7 @@
                 <button onclick="undoData()">Undo</button>
             </div>
             <!-- Adjust canvas size using width and height attributes -->
-            <canvas id="chartCanvas" width="400" height="300"></canvas>
+            <canvas id="chartCanvas" width="400" height="400"></canvas>
         </div>
         <div class="table-container">
             <h2>Data Table</h2>
@@ -38,7 +42,9 @@
             </table>
         </div>
     </div>
-
+    <div class="average-strength">
+        <p>Average Strength: <span id="averageStrength">0.00</span></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
